@@ -2,7 +2,7 @@ import string
 import requests
 from io import StringIO
 
-url = 'https://raw.githubusercontent.com/pvanheus/biocourse2018_python/master/darwin_earthworms.txt'
+book_url = 'https://raw.githubusercontent.com/pvanheus/biocourse2018_python/master/darwin_earthworms.txt'
 
 def get_page(url):
     response = requests.get(url)
@@ -41,7 +41,7 @@ def is_word(mystring):
     # or punctuation
     return True
     
-page = get_page(url)
+page = get_page(book_url)
 word_count = 0 # make a new basket called word_count and set to 0
 for line in page:
     word_list = line.split() # split the line into a list of words and set word_list to this value
